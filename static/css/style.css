@@ -1,0 +1,107 @@
+
+
+/* Default styles for body */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Container styles */
+.container {
+    flex: 1;
+}
+
+/* Navbar styles */
+.navbar {
+    height: 5rem;
+    background-color: #2C3E50;;
+}
+
+
+
+/* Nav link styles */
+.nav-link {
+    color: white !important;
+}
+
+/* Footer links styles */
+.f-info-links a {
+    text-decoration: none;
+    color: white;
+}
+
+.f-info-links a:hover {
+    text-decoration: underline;'
+    color: blue;
+}
+
+/* Footer container styles */
+.f-info-links,
+.f-info-socials,
+.f-info-brands {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Footer social icons styles */
+.f-info-socials i {
+    font-size: 1.2rem;
+    margin-right: 2rem;
+}
+
+/* Footer styles */
+.f-info {
+    text-align: center;
+    color:white;
+    height: 4rem;
+    background-color: #2C3E50;;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+/* Media query for tablets and smaller screens */
+@media (max-width: 768px) {
+    /* Navbar styles */
+    .navbar {
+        height: auto;
+    }
+
+    /* Compass icon styles */
+    .fa-compass {
+        font-size: 1.5rem;
+    }
+
+    /* Footer container styles */
+    .f-info-links,
+    .f-info-socials,
+    .f-info-brands {
+        flex-direction: row; /* Display elements horizontally */
+        justify-content: space-around; /* Spread elements evenly */
+    }
+
+    /* Footer links styles */
+    .f-info-links {
+        flex-grow: 1; /* Grow to fill available space */
+    }
+
+    /* Footer social icons styles */
+    .f-info-socials i {
+        margin-right: 0; /* Remove margin between social icons */
+    }
+}
+
+
+.my-btn{
+    margin-top:25px;
+    margin-bottom:40px;
+}
+.btn{
+    margin-top:25px;
+    margin-bottom:40px;
+}

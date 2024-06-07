@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block title %}Prediction Result{% endblock %}
+
+{% block content %}
+{% if prediction == 1 %}
+<div class="alert alert-danger">
+    <h4 class="alert-heading">Diabetes Prediction Result</h4>
+    <p>The patient is likely to have diabetes. Please consult a doctor.</p>
+    <hr>
+    <p class="mb-0">The prediction result has been sent to your email.</p>
+</div>
+{% else %}
+<div class="alert alert-success">
+    <h4 class="alert-heading">Diabetes Prediction Result</h4>
+    <p>The patient is unlikely to have diabetes. Please do not consult a doctor.</p>
+    <hr>
+    <p class="mb-0">The prediction result has been sent to your email.</p>
+</div>
+{% endif %}
+
+<a href="{{ url_for('profile') }}" class="btn btn-primary">Back to Profile</a>
+{% endblock %}

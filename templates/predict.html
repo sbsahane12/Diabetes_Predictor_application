@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+
+{% block title %}Make a Prediction{% endblock %}
+
+{% block content %}
+<body>
+    <form action="{{ url_for('predict') }}" method="POST" class="prdict-form col-md-6 offset-md-3 needs-validation" novalidate>
+        <h2 style="color: #3498DB; text-align: center;" class="mt-3 mb-4">Make a Diabetes Prediction</h2>
+        <div class="form-group">
+            <label for="pregs">Pregnancies</label>
+            <input type="number" class="form-control" id="pregs" name="pregs" required>
+        </div>
+        <div class="form-group">
+            <label for="gluc">Glucose</label>
+            <input type="number" class="form-control" id="gluc" name="gluc" required>
+        </div>
+        <div class="form-group">
+            <label for="bp">Blood Pressure</label>
+            <input type="number" class="form-control" id="bp" name="bp" required>
+        </div>
+        <div class="form-group">
+            <label for="skin">Skin Thickness</label>
+            <input type="number" class="form-control" id="skin" name="skin" required>
+        </div>
+        <div class="form-group">
+            <label for="insulin">Insulin</label>
+            <input type="number" class="form-control" id="insulin" name="insulin" required>
+        </div>
+        <div class="form-group">
+            <label for="bmi">BMI</label>
+            <input type="number" class="form-control" id="bmi" name="bmi" step="0.1" required>
+        </div>
+        <div class="form-group">
+            <label for="func">Diabetes Pedigree Function</label>
+            <input type="number" class="form-control" id="func" name="func" step="0.01" required>
+        </div>
+        <div class="form-group">
+            <label for="age">Age</label>
+            <input type="number" class="form-control" id="age" name="age" required>
+        </div>
+        <button type="submit" class="btn mybtn btn-primary">Predict</button>
+    </form>
+</body>
+{% endblock %}
